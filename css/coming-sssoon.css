@@ -760,7 +760,8 @@ h1 small, h2 small, h3 small, h1 .small, h2 .small, h3 .small {
     margin-bottom: 30px;
 }
 #video_background {
-    position: fixed;
+    position: absolute;
+    margin: auto;
     top: 0px;
     right: 0px;
     min-width: 100%;
@@ -772,7 +773,6 @@ h1 small, h2 small, h3 small, h1 .small, h2 .small, h3 .small {
     background-image: url("https://storage.googleapis.com/tenxfifty/images/main.png");
     background-position: center center;
     background-size: cover;
-
 }
 #video_pattern {
     position: fixed;
@@ -797,7 +797,7 @@ h1 small, h2 small, h3 small, h1 .small, h2 .small, h3 .small {
     color: #AAAAAA;
     z-index: 4;
     text-align: right;
-    margin-top: -50px;
+    margin-top: 0px;
     clear: both;
 }
 .footer a{
@@ -834,13 +834,6 @@ h1 small, h2 small, h3 small, h1 .small, h2 .small, h3 .small {
         width: 250px;
     }   
 }
-
-
-
-
-/*          For demo purpose         */
-
-
 
 .fixed-plugin{
     position: fixed;
