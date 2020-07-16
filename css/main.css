@@ -1,0 +1,247 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* Custom styles */
+html, body {
+    height: 100%;
+}
+/* Menu */
+.header {
+    background-color: rgba(0, 0, 0, 0.75);
+    padding: 10px 20px;
+    max-width: 1170px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+}
+
+.menu_button-container {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.menu {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height .2s;
+}
+
+.menu__open {
+    max-height: 50px;
+}
+
+.menu_button {
+    position: relative;
+    background: transparent;
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    border: 0;
+}
+
+.menu_button-line {
+    height: 2px;
+    width: 20px;
+    position: absolute;
+    left: 10px;
+    background-color: #fff;
+    border-radius: 4px;
+    transition: opacity .4s, transform .4s;
+}
+
+.menu_button-line:nth-child(1){
+    top: 13px;
+}
+.menu_button-line:nth-child(2){
+    top: 19px;
+}
+.menu_button-line:nth-child(3){
+    top: 25px;
+}
+
+.menu_button__open .menu_button-line:nth-child(2) {
+    opacity: 0;
+}
+
+.menu_button__open .menu_button-line:nth-child(1) {
+    transform: translateY(6px) rotate(45deg)
+}
+
+.menu_button__open .menu_button-line:nth-child(3) {
+    transform: translateY(-6px) rotate(-45deg)
+}
+
+.menu_list {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0;
+}
+
+.menu_item {
+    color: #fff;
+    opacity: .7;
+    font-size: 22px;
+    text-decoration: none;
+    transition: opacity .4s;
+}
+
+.menu_item:hover {
+    opacity: 1;
+}
+
+.menu_item:visited {
+    color: #fff;
+}
+
+/* Desktop menu */
+@media (min-width: 768px) {
+    .header {
+        background-color: transparent;
+    }
+
+    .menu_button {
+        display: none;
+    }
+
+    .menu {
+        max-height: none;
+    }
+
+    .menu_list {
+        justify-content: flex-end;
+        margin-right: -20px;
+    }
+
+    .menu_item {
+        margin: 0 20px;
+    }
+}
+
+/* Footer styles */
+.footer {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    color: #aaa;
+    position: absolute;
+    bottom: 15px;
+    left: 0;
+    right: 0;
+    z-index: 2;
+}
+
+.footer_container {
+    max-width: 1170px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.footer_link {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer_link:hover {
+    text-decoration: underline;
+}
+
+.footer_heart {
+    color: #FF3B30;
+}
+
+/* Main styles */
+.main {
+    background-image: url('../images/main.png');
+    background-position: center center;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.main_cover{
+    position: fixed;
+    opacity: 1;
+    background-color: rgba(0,0,0,.6);
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 100%;
+    background-image: url("../images/main.png");
+    background-position: center center;
+    background-size: cover;
+}
+
+.video_container {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+}
+
+@media (min-width: 980px) {
+    .video {
+        height: auto;
+        width: 100%;
+    }
+}
