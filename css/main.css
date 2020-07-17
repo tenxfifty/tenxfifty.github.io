@@ -139,6 +139,16 @@ html, body {
     color: #fff;
 }
 
+.icon_heart {
+    width: 16px;
+    fill: #FF3B30;
+    vertical-align: middle;
+}
+
+.icon_instagram, .icon_strava, .icon_telegram, .icon_email, .icon_facebook, .icon_vk {
+    height: 22px;
+}
+
 /* Desktop menu */
 @media (min-width: 768px) {
     .header {
@@ -190,10 +200,6 @@ html, body {
 
 .footer_link:hover {
     text-decoration: underline;
-}
-
-.footer_heart {
-    color: #FF3B30;
 }
 
 /* Main styles */
