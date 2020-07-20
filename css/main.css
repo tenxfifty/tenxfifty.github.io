@@ -204,7 +204,7 @@ html, body {
 
 /* Main styles */
 .main {
-    background-image: url('../images/main.png');
+    background-image: url('../images/main.webp');
     background-position: center center;
     background-size: cover;
     position: absolute;
@@ -230,8 +230,9 @@ html, body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    height: 100%;
-    background-image: url("../images/main.png");
+    min-width: 100%;
+    min-height: 100%;
+    background-image: url("../images/main.webp");
     background-position: center center;
     background-size: cover;
 }
