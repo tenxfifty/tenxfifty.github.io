@@ -139,6 +139,16 @@ html, body {
     color: #fff;
 }
 
+.icon_heart {
+    width: 16px;
+    fill: #FF3B30;
+    vertical-align: middle;
+}
+
+.icon_instagram, .icon_strava, .icon_telegram, .icon_email, .icon_facebook, .icon_vk {
+    height: 22px;
+}
+
 /* Desktop menu */
 @media (min-width: 768px) {
     .header {
@@ -192,10 +202,6 @@ html, body {
     text-decoration: underline;
 }
 
-.footer_heart {
-    color: #FF3B30;
-}
-
 /* Main styles */
 .main {
     background-image: url('../images/main.webp');
@@ -224,7 +230,8 @@ html, body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    height: 100%;
+    min-width: 100%;
+    min-height: 100%;
     background-image: url("../images/main.webp");
     background-position: center center;
     background-size: cover;
